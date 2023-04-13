@@ -1,6 +1,19 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "hero-banner": {
+        "type": "hero-banner",
+        "settings": {
+          "id1": "sdfsdfdfgfd"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
