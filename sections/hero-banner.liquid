@@ -1,11 +1,31 @@
 <div class="hero-banner">
-    <div class="img-banner">
-        <img class="bg-banner" src="https://demoda.vn/wp-content/uploads/2022/01/hinh-nen-4k-laptop-va-pc.jpg" alt="banner">
-    </div>
-    <div class="content-banner">
-        <h1 class="title">{{ content }}Enjoy This Winter Trend</h1>
-        <p class="content">Discover now latest collection</p>
-        <button class="btn btn-shop"><a href="#">Shop Now</a></button>
-    </div>
+  <div class="img-banner">
+    <img
+      class="bg-banner"
+      src="https://demoda.vn/wp-content/uploads/2022/01/hinh-nen-4k-laptop-va-pc.jpg"
+      alt="banner">
+  </div>
+  <div class="content-banner">
+    <h1 class="title">{{ content }}Enjoy This Winter Trend</h1>
+    <p class="content">
+      {{ id1 | escape }}
+    </p>
+    <button class="btn btn-shop">
+      <a href="#">Shop Now</a>
+    </button>
+  </div>
 </div>
-schema
+{% schema %}
+  {
+    "name": "abc",
+    "class": "qw",
+    "settings": [
+      {
+        "type": "text",
+        "id": "id1",
+        "default": "add the text",
+        "label": "Name"
+      }
+    ]
+  }
+{% endschema %}
