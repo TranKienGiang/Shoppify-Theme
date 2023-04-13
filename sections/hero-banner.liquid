@@ -8,13 +8,16 @@
   <div class="content-banner">
     <h1 class="title">{{ content }}Enjoy This Winter Trend</h1>
     <p class="content">
-      {{ id1 | escape }}
+      {{ section.settings.id1 }}
     </p>
     <button class="btn btn-shop">
       <a href="#">Shop Now</a>
     </button>
   </div>
 </div>
+<script>
+  console.log({{ id1 | json}})
+</script>
 {% schema %}
   {
     "name": "abc",
@@ -25,6 +28,14 @@
         "id": "id1",
         "default": "add the text",
         "label": "Name"
+      }, {
+        "type": "image_picker",
+        "id": "img-dt",
+        "label": "Img DT"
+      }, {
+        "type": "image_picker",
+        "id": "img-mb",
+        "label": "Img mb"
       }
     ]
   }
