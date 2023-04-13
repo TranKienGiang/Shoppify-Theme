@@ -1,23 +1,18 @@
 <div class="hero-banner">
   <div class="img-banner">
-    <img
-      class="bg-banner"
-      src="{{ section.settings.img-mb | asset_img_url }}"
-      alt="banner">
+    {{ section.settings.img-mb | img_url: '2048x' | img_tag }}
   </div>
   <div class="content-banner">
-    <h1 class="title">{{ content }}Enjoy This Winter Trend</h1>
+    <h1 class="title">{{ section.settings.title }}</h1>
     <p class="content">
-      {{ section.settings.id1 }}
+      {{ section.settings.content }}
     </p>
     <button class="btn btn-shop">
       <a href="#">Shop Now</a>
     </button>
   </div>
 </div>
-<script>
-  console.log({{ id1 | json}})
-</script>
+
 {% schema %}
   {
     "name": "abc",
@@ -25,8 +20,8 @@
     "settings": [
       {
         "type": "text",
-        "id": "id1",
-        "default": "add the text",
+        "id": "content",
+        "default": "",
         "label": "Name"
       }, {
         "type": "image_picker",
@@ -36,7 +31,13 @@
         "type": "image_picker",
         "id": "img-mb",
         "label": "Img mb"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": ""
       }
+
     ]
   }
 {% endschema %}
