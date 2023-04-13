@@ -4,7 +4,9 @@
       "hero-banner": {
         "type": "hero-banner",
         "settings": {
-          "id1": "sdfsdfdfgfd"
+          "id1": "sdfsdfdfgfd",
+          "img-dt": "shopify:\/\/shop_images\/havert.jpg",
+          "img-mb": "shopify:\/\/shop_images\/havert.jpg"
         }
       }
     },
